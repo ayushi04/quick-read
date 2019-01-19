@@ -1,0 +1,44 @@
+sudo apt-get update
+sudo apt-get upgrade
+
+sudo apt-get install gnome-tweaks
+#follow this link afterwards to enable right click
+
+sudo apt -y install software-properties-common build-essential checkinstall wget curl git libssl-dev apt-transport-https ca-certificates
+sudo apt -y install libavahi-compat-libdnssd-dev
+sudo apt-get update
+sudo apt-get -Y upgrade
+
+mkdir -p ~/.fonts/
+	rm -f ~/.fonts/FiraCode-*
+	wget https://github.com/tonsky/FiraCode/raw/master/distr/otf/FiraCode-Bold.otf -O ~/.fonts/FiraCode-Bold.otf
+	wget https://github.com/tonsky/FiraCode/raw/master/distr/otf/FiraCode-Light.otf -O ~/.fonts/FiraCode-Light.otf
+	wget https://github.com/tonsky/FiraCode/raw/master/distr/otf/FiraCode-Medium.otf -O ~/.fonts/FiraCode-Medium.otf
+	wget https://github.com/tonsky/FiraCode/raw/master/distr/otf/FiraCode-Regular.otf -O ~/.fonts/FiraCode-Regular.otf
+	wget https://github.com/tonsky/FiraCode/raw/master/distr/otf/FiraCode-Retina.otf -O ~/.fonts/FiraCode-Retina.otf
+fc-cache -v
+
+google_chrome:
+	rm -f google-chrome-stable_current_amd64.deb
+	wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+	sudo apt -y install libappindicator1 libindicator7
+	sudo dpkg -i google-chrome-stable_current_amd64.deb
+rm -f google-chrome-stable_current_amd64.deb
+
+python:
+	make preparations
+	sudo -H apt -y install python-pip
+sudo -H pip install --upgrade pip
+
+sudo apt-get install libdouble-conversion1
+sudo apt-get install libqt5core5a
+sudo apt install libqt5script5
+sudo apt install libqt5dbus5
+sudo nano /etc/apt/apt.conf
+echo $http_proxy
+echo $https_proxy
+echo $ftp_proxy
+sudo gedit environment 
+#above commands didnt help out to enable textlive and okular installation for ubuntu software center, getting some proxy error
+
+
