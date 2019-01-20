@@ -38,7 +38,19 @@ sudo nano /etc/apt/apt.conf
 echo $http_proxy
 echo $https_proxy
 echo $ftp_proxy
+cd /etc/
 sudo gedit environment 
 #above commands didnt help out to enable textlive and okular installation for ubuntu software center, getting some proxy error
 
+#installed texmaker and okular for ubuntu software center
+
+
+curl -O https://repo.anaconda.com/archive/Anaconda3-5.2.0-Linux-x86_64.sh
+bash Anaconda3-5.2.0-Linux-x86_64.sh
+#anaconda location : /home/ayushi/anaconda3
+#help link : https://linuxize.com/post/how-to-install-anaconda-on-ubuntu-18-04/
+sudo gedit ~/.bashrc 
+source ~/.bashrc
+conda update conda
+conda update anaconda
 
