@@ -78,3 +78,9 @@ sudo tlp start
 
 #system cleaning
 sudo apt autoremove
+
+#python3-pip
+sudo apt install python3-pip
+
+#ubuntu screen recorded refer url : https://linuxconfig.org/how-to-record-screen-on-ubuntu-18-04-bionic-beaver-linux
+sudo apt install simplescreenrecorder
