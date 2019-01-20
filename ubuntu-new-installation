@@ -58,6 +58,8 @@ conda update anaconda
 #pyqt5
 conda install -c anaconda pyqt #some packages are updated, no new installation, i think not required
 pip install PyQt5
+#above two didnt work so i ran below commands
+sudo apt-get install python3-pyqt5
 
 #venv
 conda install virtualenv
