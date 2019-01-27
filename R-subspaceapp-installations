@@ -1,0 +1,9 @@
+sudo apt-get install libcurl4-openssl-dev #TO install CURL
+install.packages("devtools", dependencies=TRUE)
+devtools::install_github("hadley/shinySignals")
+install.packages('shinydashboard')
+install.packages("bubbles")
+install.packages("stargazer")
+install.packages("Rtsne")
+install.packages(c("GGally", "pairsD3", "plotly", "Rtsne", "stargazer", "survminer"))
+devtools::install_github("timelyportfolio/parcoords")
